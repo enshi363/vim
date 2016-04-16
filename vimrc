@@ -2,12 +2,13 @@ set nocompatible              " be iMproved, required
 filetype off                  " required
 
 " set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/vundle/Vundle.vim
+set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'
 
 Plugin 'https://github.com/kristijanhusak/vim-hybrid-material.git'
+"Plugin 'https://github.com/jdkanani/vim-material-theme'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'https://github.com/scrooloose/nerdtree.git'
@@ -42,9 +43,10 @@ set t_Co=256
 
 
 " theme setting 
+"set background=dark
+"colorscheme material-theme
 let g:enable_bold_font = 1
 colorscheme hybrid_material
-
 
 "airline setting-----------
 set guifont=Ubuntu\ Mono\ derivative\ Powerline:h14
