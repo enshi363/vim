@@ -17,6 +17,9 @@ Plugin 'terryma/vim-multiple-cursors'
 Plugin 'tpope/vim-markdown'
 Plugin 'rking/ag.vim'
 Plugin 'mattn/emmet-vim'
+Plugin 'pangloss/vim-javascript'
+Plugin 'stanangeloff/php.vim'
+Plugin 'valloric/youcompleteme'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -43,7 +46,7 @@ set t_Co=256
 
 
 " theme setting 
-"set background=dark
+set background=dark
 "colorscheme material-theme
 let g:enable_bold_font = 1
 colorscheme hybrid_material
@@ -92,3 +95,20 @@ let g:markdown_fenced_languages = ['html', 'php','javascript','css', 'bash=sh']
 " only enable for html css
 let g:user_emmet_install_global = 0
 autocmd FileType html,css EmmetInstall
+
+" javascript setting
+let g:javascript_enable_domhtmlcss=1
+
+
+" Enable omni completion.
+autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
+autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
+autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
+" autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
+autocmd FileType php setlocal omnifunc=phpcomplete#CompletePHP
+" autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
+
+" ==== YouCompleteMe Setup ====
+"
+let g:ycm_seed_identifiers_with_syntax = 1
+let g:ycm_key_invoke_completion = '<C-F>'
