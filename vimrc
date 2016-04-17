@@ -12,7 +12,7 @@ Plugin 'https://github.com/kristijanhusak/vim-hybrid-material.git'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'https://github.com/scrooloose/nerdtree.git'
-Plugin 'kien/ctrlp.vim'
+Plugin 'https://github.com/ctrlpvim/ctrlp.vim.git'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'tpope/vim-markdown'
 Plugin 'rking/ag.vim'
@@ -20,6 +20,7 @@ Plugin 'mattn/emmet-vim'
 Plugin 'pangloss/vim-javascript'
 Plugin 'stanangeloff/php.vim'
 Plugin 'valloric/youcompleteme'
+Plugin 'majutsushi/tagbar'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -43,6 +44,11 @@ set hidden
 set guioptions-=T
 set guioptions-=m
 set t_Co=256
+
+"short cut key
+let mapleader=","
+
+
 
 
 " theme setting 
@@ -71,6 +77,7 @@ noremap <C-k><C-b> :NERDTreeToggle<cr>
 " ctrlP setting
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
+noremap <leader>b :CtrlPBuffer<cr>
 let g:ctrlp_working_path_mode = 'ra'
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*/node_modules/*,*/vendor/*,*/lib/*,*/dist/*     " MacOSX/Linux
 set wildignore+=*\\tmp\\*,*.swp,*.zip,*.exe  " Windows
@@ -112,3 +119,7 @@ autocmd FileType php setlocal omnifunc=phpcomplete#CompletePHP
 "
 let g:ycm_seed_identifiers_with_syntax = 1
 let g:ycm_key_invoke_completion = '<C-F>'
+
+
+"tagbar setting
+nmap <C-R> :TagbarToggle<CR>
