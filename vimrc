@@ -7,11 +7,7 @@ call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'
 
-"Plugin 'https://github.com/kristijanhusak/vim-hybrid-material.git'
-"Plugin 'https://github.com/jdkanani/vim-material-theme'
-"Plugin 'https://github.com/jackiehluo/vim-material.git'
 Plugin 'kristijanhusak/vim-hybrid-material'
-"Plugin 'nlknguyen/papercolor-theme'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
@@ -26,6 +22,7 @@ Plugin 'stanangeloff/php.vim'
 Plugin 'valloric/youcompleteme'
 Plugin 'majutsushi/tagbar'
 Plugin 'tpope/vim-fugitive'
+"Plugin 'ervandew/supertab'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -50,11 +47,18 @@ set guioptions-=T
 set guioptions-=m
 set t_Co=256
 set guifont=monofur\ for\ Powerline:h15
+set guioptions-=r
+set guioptions-=l
+set completeopt=""
 
 "short cut key
 let mapleader=","
 
-
+"common key map
+nnoremap <c-j> <c-w>j
+nnoremap <c-k> <c-w>k
+nnoremap <c-h> <c-w>h
+nnoremap <c-l> <c-w>l
 
 
 " theme setting 
@@ -79,7 +83,8 @@ let g:airline#extensions#tabline#buffer_nr_show = 0
 nnoremap [b :bp<CR>
 nnoremap ]b :bn<CR>
 "let g:airline_theme = "powerlineish"
-let g:airline_theme = "hybrid"
+"let g:airline_theme = "hybrid"
+let g:airline_theme = "bubblegum"
 
 " nerdtree setting
 noremap <C-k><C-b> :NERDTreeToggle<cr>
@@ -128,9 +133,9 @@ autocmd FileType php setlocal omnifunc=phpcomplete#CompletePHP
 
 " ==== YouCompleteMe Setup ====
 "
-let g:ycm_seed_identifiers_with_syntax = 1
-let g:ycm_key_invoke_completion = '<C-F>'
 
+let g:ycm_seed_identifiers_with_syntax = 1
+let g:ycm_key_invoke_completion = '<C-C>'
 
 "tagbar setting
 nmap <C-R> :TagbarToggle<CR>
