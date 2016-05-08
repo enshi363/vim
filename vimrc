@@ -7,7 +7,7 @@ call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'
 
-Plugin 'kristijanhusak/vim-hybrid-material'
+"Plugin 'kristijanhusak/vim-hybrid-material'
 "Plugin 'altercation/vim-colors-solarized'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
@@ -24,7 +24,7 @@ Plugin 'majutsushi/tagbar'
 Plugin 'tpope/vim-fugitive'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'tpope/vim-surround'
-"Plugin 'ervandew/supertab'
+Plugin 'flazz/vim-colorschemes'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -65,11 +65,10 @@ nnoremap <c-l> <c-w>l
 
 " theme setting 
 set background=dark
-"colorscheme material-theme
 "colorscheme solarized
 let g:enable_bold_font = 1
-"colorscheme PaperColor
-colorscheme hybrid_material 
+"colorscheme hybrid_material 
+colorscheme Tomorrow-Night-Eighties 
 
 
 "airline setting-----------
