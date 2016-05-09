@@ -8,7 +8,7 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 
 Plugin 'kristijanhusak/vim-hybrid-material'
-Plugin 'altercation/vim-colors-solarized'
+"Plugin 'altercation/vim-colors-solarized'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'https://github.com/scrooloose/nerdtree.git'
@@ -22,6 +22,7 @@ Plugin 'stanangeloff/php.vim'
 Plugin 'valloric/youcompleteme'
 Plugin 'majutsushi/tagbar'
 Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-surround'
 "Plugin 'ervandew/supertab'
 
 call vundle#end()            " required
