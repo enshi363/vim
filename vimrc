@@ -7,7 +7,6 @@ call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'
 
-Plugin 'kristijanhusak/vim-hybrid-material'
 "Plugin 'altercation/vim-colors-solarized'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
@@ -22,14 +21,17 @@ Plugin 'stanangeloff/php.vim'
 Plugin 'valloric/youcompleteme'
 Plugin 'majutsushi/tagbar'
 Plugin 'tpope/vim-fugitive'
+Plugin 'scrooloose/nerdcommenter'
 Plugin 'tpope/vim-surround'
-"Plugin 'ervandew/supertab'
+Plugin 'flazz/vim-colorschemes'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
 
 " common setting
 syntax on
+set backspace=2 " Backspace deletes like most programs in insert mode
+set autoread " Reload files changed outside vim
 set number
 set cursorline
 set ruler
@@ -52,8 +54,31 @@ set guioptions-=r
 set guioptions-=l
 set completeopt=""
 
+" Trigger autoread when changing buffers or coming back to vim in terminal.
+au FocusGained,BufEnter * :silent! !
+
+"Allow usage of mouse in iTerm
+"set ttyfast
+"set mouse=a
+"" set ttymouse=xterm2
+
+set hlsearch
+nnoremap <silent> <leader>, :noh<cr> "Stop highlight after searching
+set incsearch
+set showmatch
+
+" display extra whitespace
+"set list listchars=tab:»·,trail:·,nbsp:·
+
+"HTML Editing
+set matchpairs+=<:>
+
+" Treat <li> and <p> tags like the block tags they are
+let g:html_indent_tags = 'li\|p'
+
+
 "short cut key
-let mapleader=","
+let mapleader=" "
 
 "common key map
 nnoremap <c-j> <c-w>j
@@ -61,15 +86,53 @@ nnoremap <c-k> <c-w>k
 nnoremap <c-h> <c-w>h
 nnoremap <c-l> <c-w>l
 
+" bind \ (backward slash) to grep shortcut  
+command! -nargs=+ -complete=file -bar Ag silent! grep!   <args>|cwindow|redraw!
+ nnoremap \ :Ag<SPACE>
+" Ag will search from project root
+let g:ag_working_path_mode="r"
+
+
+"Map Ctrl + S to save in any mode
+noremap <silent> <C-S>          :update<CR>
+vnoremap <silent> <C-S>         <C-C>:update<CR>
+inoremap <silent> <C-S>         <C-O>:update<CR>
+" Also map leader + s
+map <leader>s <C-S>
+
+
+
+" resize panes
+nnoremap <silent> <Right> :vertical resize +5<cr>
+nnoremap <silent> <Left> :vertical resize -5<cr>
+nnoremap <silent> <Up> :resize +5<cr>
+nnoremap <silent> <Down> :resize -5<cr>
+
+"Toggle relative numbering, and set to absolute on loss of focus or insert mode
+set rnu
+function! ToggleNumbersOn()
+    set nu!
+    set rnu
+endfunction
+function! ToggleRelativeOn()
+    set rnu!
+    set nu
+endfunction
+autocmd FocusLost * call ToggleRelativeOn()
+autocmd FocusGained * call ToggleRelativeOn()
+autocmd InsertEnter * call ToggleRelativeOn()
+autocmd InsertLeave * call ToggleRelativeOn()
+
+
 
 " theme setting 
-set background=dark
-"colorscheme material-theme
 "colorscheme solarized
-let g:enable_bold_font = 1
-"colorscheme PaperColor
-colorscheme hybrid_material 
-
+"set background=dark
+"let g:enable_bold_font = 1
+"let g:solarized_termcolors=256
+"colorscheme hybrid_material 
+colorscheme Tomorrow-Night-Eighties 
+hi Normal ctermfg=252 ctermbg=none
 
 "airline setting-----------
 set guifont=monofur\ for\ Powerline:h15
@@ -84,6 +147,7 @@ let g:airline#extensions#tabline#buffer_nr_show = 0
 nnoremap [b :bp<CR>
 nnoremap ]b :bn<CR>
 "let g:airline_theme = "powerlineish"
+"let g:airline_theme = "solarized"
 "let g:airline_theme = "hybrid"
 let g:airline_theme = "bubblegum"
 
@@ -101,10 +165,10 @@ set wildignore+=*\\tmp\\*,*.swp,*.zip,*.exe  " Windows
 
 "let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
 let g:ctrlp_custom_ignore = {
-						\ 'dir':  '\v[\/]\.(git|hg|svn)$',
-						\ 'file': '\v\.(exe|so|dll)$',
-						\ 'link': 'some_bad_symbolic_links'
-						\ }
+            \ 'dir':  '\v[\/]\.(git|hg|svn)$',
+            \ 'file': '\v\.(exe|so|dll)$',
+            \ 'link': 'some_bad_symbolic_links'
+            \ }
 
 " markdown setting
 autocmd BufNewFile,BufReadPost *.md set filetype=markdown
