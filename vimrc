@@ -27,6 +27,8 @@ Plugin 'vimwiki/vimwiki'
 Plugin 'mxw/vim-jsx'
 Plugin 'xolox/vim-misc'
 Plugin 'xolox/vim-session'
+Plugin 'SirVer/ultisnips'
+Plugin 'honza/vim-snippets'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
