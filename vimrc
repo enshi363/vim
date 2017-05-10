@@ -11,7 +11,7 @@ Plugin 'kristijanhusak/vim-hybrid-material'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'scrooloose/nerdtree'
-Plugin 'https://github.com/ctrlpvim/ctrlp.vim.git'
+Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'tpope/vim-markdown'
 Plugin 'rking/ag.vim'
@@ -29,6 +29,8 @@ Plugin 'xolox/vim-misc'
 Plugin 'xolox/vim-session'
 Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
+Plugin 'mattn/calendar-vim'
+Plugin 'd11wtq/ctrlp_bdelete.vim'
 
 call vundle#end()            " required
 filetype plugin indent on    " required

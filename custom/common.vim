@@ -38,7 +38,7 @@ au FocusGained,BufEnter * :silent! !
 
 
 set hlsearch
-nnoremap <silent> <leader>, :noh<cr> "Stop highlight after searching
+nnoremap <silent> <leader>l :noh<cr> "Stop highlight after searching
 set incsearch
 set showmatch
 

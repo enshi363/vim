@@ -50,3 +50,12 @@ nnoremap <leader>sc :CloseSession<CR>
 
 "tagbar setting
 nmap <C-R> :TagbarToggle<CR>
+
+
+" vimwiki
+nnoremap <Leader>tt :VimwikiToggleListItem<CR>
+let g:vimwiki_use_calendar = 1 "使用calendar
+
+"calendar 
+"nnoremap <Leader>cal :Calendar<CR>
+"nnoremap <Leader>caL: :CalendarH<CR>

@@ -14,4 +14,5 @@ let g:airline_section_a = airline#section#create(['mode',' ','branch'])
 set laststatus=2
 "let g:airline#extensions#tabline#show_buffers = 1 
 "let g:airline#extensions#tabline#buffer_nr_show = 0 
-let g:airline_theme = "hybrid"
+"let g:airline_theme = "hybrid"
+let g:airline_theme = "bubblegum"
