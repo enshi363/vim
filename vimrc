@@ -31,6 +31,7 @@ Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
 Plugin 'mattn/calendar-vim'
 Plugin 'd11wtq/ctrlp_bdelete.vim'
+Plugin 'isRuslan/vim-es6'
 
 call vundle#end()            " required
 filetype plugin indent on    " required

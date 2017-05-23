@@ -30,9 +30,9 @@ nnoremap ]b :bn<CR>
 
 
 " nerdtree setting
-"noremap <C-k><C-b> :NERDTreeToggle<cr> " session插件使用时会有目录停留在原来session中
-noremap <C-k><C-o> :NERDTree<cr>
-noremap <C-k><C-x> :NERDTreeClose<cr>
+noremap <C-k><C-b> :NERDTreeToggle<cr> " session插件使用时会有目录停留在原来session中
+"noremap <C-k><C-o> :NERDTree<cr>
+"noremap <C-k><C-x> :NERDTreeClose<cr>
 
 " ctrlP keybind 
 let g:ctrlp_map = '<c-p>'

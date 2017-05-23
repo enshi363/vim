@@ -1,4 +1,4 @@
-let g:ctrlp_working_path_mode = 'wa'
+let g:ctrlp_working_path_mode = 'ra'
 "let g:ctrlp_user_command = 'find %s -type f'
 " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
 let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'

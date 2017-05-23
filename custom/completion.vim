@@ -25,6 +25,7 @@ let g:ycm_complete_in_strings = 1
 "定义快捷健补全
 let g:ycm_key_list_select_completion = ['<c-n>', '<Down>']
 let g:ycm_key_list_previous_completion = ['<c-p>', '<Up>']
+let g:ycm_key_invoke_completion = ''
 " 设置在下面几种格式的文件上屏蔽ycm
 let g:ycm_filetype_blacklist = {
       \ 'tagbar' : 1,
