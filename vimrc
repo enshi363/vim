@@ -13,7 +13,6 @@ Plugin 'vim-airline/vim-airline-themes'
 Plugin 'scrooloose/nerdtree'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'terryma/vim-multiple-cursors'
-Plugin 'tpope/vim-markdown'
 Plugin 'rking/ag.vim'
 Plugin 'mattn/emmet-vim'
 Plugin 'pangloss/vim-javascript'
@@ -32,6 +31,8 @@ Plugin 'honza/vim-snippets'
 Plugin 'mattn/calendar-vim'
 Plugin 'd11wtq/ctrlp_bdelete.vim'
 Plugin 'isRuslan/vim-es6'
+Plugin 'godlygeek/tabular'
+Plugin 'plasticboy/vim-markdown'
 
 call vundle#end()            " required
 filetype plugin indent on    " required

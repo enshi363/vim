@@ -1,6 +1,12 @@
 " markdown setting
 autocmd BufNewFile,BufReadPost *.md set filetype=markdown
-let g:markdown_fenced_languages = ['json','html', 'php','javascript','css', 'bash=sh']
+let g:vim_markdown_folding_disabled = 1
+let g:vim_markdown_override_foldtext = 0
+let g:vim_markdown_no_default_key_mappings = 1
+let g:vim_markdown_toc_autofit = 1
+set conceallevel=2
+let g:vim_markdown_fenced_languages = ['bash=sh','php','xml','js=javascript','javascript','json=javascript','css']
+map asdf <Plug>Markdown_MoveToParentHeader
 
 " ag setting 
 "  always start searching from your project root instead of the cwd
