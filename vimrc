@@ -23,7 +23,7 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'tpope/vim-surround'
 Plugin 'vimwiki/vimwiki'
-Plugin 'mxw/vim-jsx'
+"Plugin 'mxw/vim-jsx'
 Plugin 'xolox/vim-misc'
 Plugin 'xolox/vim-session'
 Plugin 'SirVer/ultisnips'
@@ -33,6 +33,8 @@ Plugin 'd11wtq/ctrlp_bdelete.vim'
 Plugin 'isRuslan/vim-es6'
 Plugin 'godlygeek/tabular'
 Plugin 'plasticboy/vim-markdown'
+Plugin 'shougo/vimproc.vim'
+Plugin 'leafgarland/typescript-vim'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
