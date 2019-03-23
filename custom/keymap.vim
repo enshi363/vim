@@ -40,25 +40,4 @@ let g:ctrlp_cmd = 'CtrlP'
 noremap <leader>b :CtrlPBuffer<cr>
 noremap <leader>p :ClearCtrlPCache<cr>
 
-" session 
-nnoremap <leader>so :OpenSession
-nnoremap <leader>ss :SaveSession
-nnoremap <leader>sd :DeleteSession<CR>
-nnoremap <leader>sc :CloseSession<CR>
-
-
-
-"tagbar setting
-nmap <C-R> :TagbarToggle<CR>
-
-
-" vimwiki
-nnoremap <Leader>tt :VimwikiToggleListItem<CR>
-let g:vimwiki_use_calendar = 1 "使用calendar
-
-"calendar 
-"nnoremap <Leader>cal :Calendar<CR>
-"nnoremap <Leader>caL: :CalendarH<CR>
-
-
 

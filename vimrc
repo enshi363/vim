@@ -1,43 +1,46 @@
-set nocompatible              " be iMproved, required
-filetype off                  " required
-
+"set nocompatible              " be iMproved, required
+"filetype off                  " required
+if empty(glob('~/.vim/autoload/plug.vim'))
+  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
+if has('pythonx') 
+    let g:python3_host_prog='/opt/local/bin/python3.7'
+endif
 " set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+" source ~/.vim/vimPlug/plug.vim
+call plug#begin('~/.vim/plugged')
 
-Plugin 'VundleVim/Vundle.vim'
+Plug 'junegunn/vim-easy-align'
+Plug 'flazz/vim-colorschemes'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'scrooloose/nerdtree' , { 'on':  'NERDTreeToggle' }
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'terryma/vim-multiple-cursors'
+Plug 'rking/ag.vim'
+Plug 'mattn/emmet-vim'
+Plug 'pangloss/vim-javascript'
+Plug 'stanangeloff/php.vim'
+Plug 'tpope/vim-fugitive'
+Plug 'scrooloose/nerdcommenter'
+Plug 'tpope/vim-surround'
+Plug 'xolox/vim-misc'
+Plug 'SirVer/ultisnips'
+Plug 'honza/vim-snippets'
+Plug 'd11wtq/ctrlp_bdelete.vim'
+Plug 'isRuslan/vim-es6'
+Plug 'godlygeek/tabular'
+Plug 'plasticboy/vim-markdown' ,{ 'for': 'markdown' }
+Plug 'shougo/vimproc.vim' ,{ 'do': 'make' }
+Plug 'leafgarland/typescript-vim'
+Plug 'fatih/vim-go', { 'tag': '*' ,'do': ':GoInstallBinaries' }
+Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}}
+"Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+"Plug 'junegunn/fzf.vim'
 
-Plugin 'kristijanhusak/vim-hybrid-material'
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
-Plugin 'scrooloose/nerdtree'
-Plugin 'ctrlpvim/ctrlp.vim'
-Plugin 'terryma/vim-multiple-cursors'
-Plugin 'rking/ag.vim'
-Plugin 'mattn/emmet-vim'
-Plugin 'pangloss/vim-javascript'
-Plugin 'stanangeloff/php.vim'
-Plugin 'valloric/youcompleteme'
-Plugin 'majutsushi/tagbar'
-Plugin 'tpope/vim-fugitive'
-Plugin 'scrooloose/nerdcommenter'
-Plugin 'tpope/vim-surround'
-Plugin 'vimwiki/vimwiki'
-"Plugin 'mxw/vim-jsx'
-Plugin 'xolox/vim-misc'
-Plugin 'xolox/vim-session'
-Plugin 'SirVer/ultisnips'
-Plugin 'honza/vim-snippets'
-Plugin 'mattn/calendar-vim'
-Plugin 'd11wtq/ctrlp_bdelete.vim'
-Plugin 'isRuslan/vim-es6'
-Plugin 'godlygeek/tabular'
-Plugin 'plasticboy/vim-markdown'
-Plugin 'shougo/vimproc.vim'
-Plugin 'leafgarland/typescript-vim'
-
-call vundle#end()            " required
-filetype plugin indent on    " required
+call plug#end()            " required
 
 
 source ~/.vim/custom/common.vim
@@ -45,27 +48,5 @@ source ~/.vim/custom/theme.vim
 source ~/.vim/custom/keymap.vim
 source ~/.vim/custom/ctrlP.vim
 source ~/.vim/custom/modesetting.vim
-source ~/.vim/custom/completion.vim
-source ~/.vim/custom/wiki.vim
 
-
-" display extra whitespace
-"set list listchars=tab:»·,trail:·,nbsp:·
-
-
-
-
-"Toggle relative numbering, and set to absolute on loss of focus or insert mode
-"set rnu
-"function! ToggleNumbersOn()
-"    set nu!
-"    set rnu
-"endfunction
-"function! ToggleRelativeOn()
-"    set rnu!
-"    set nu
-"endfunction
-"autocmd FocusLost * call ToggleRelativeOn()
-"autocmd FocusGained * call ToggleRelativeOn()
-"autocmd InsertEnter * call ToggleRelativeOn()
-"autocmd InsertLeave * call ToggleRelativeOn()
+source ~/.vim/custom/coc.vim

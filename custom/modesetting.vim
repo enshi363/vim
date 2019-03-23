@@ -31,5 +31,3 @@ set matchpairs+=<:>
 let g:html_indent_tags = 'li\|p'
 
 
-" Ag will search from project root
-let g:ag_working_path_mode="r"

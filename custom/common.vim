@@ -42,10 +42,3 @@ nnoremap <silent> <leader>l :noh<cr> "Stop highlight after searching
 set incsearch
 set showmatch
 
-
-
-"session setting
-let g:session_autoload = "no"
-let g:session_autosave = "no"
-let g:session_command_aliases = 1
-

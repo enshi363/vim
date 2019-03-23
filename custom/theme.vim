@@ -1,7 +1,8 @@
 " theme setting 
 
-colorscheme hybrid_material  
-set background=dark
+"colorscheme hybrid_material  
+colorscheme solarized8_dark
+"set background=dark
 let g:enable_bold_font = 1
 hi Normal ctermfg=252 ctermbg=none
 "hi CursorLine   ctermbg=none cterm=none
@@ -14,5 +15,5 @@ let g:airline_section_a = airline#section#create(['mode',' ','branch'])
 set laststatus=2
 "let g:airline#extensions#tabline#show_buffers = 1 
 "let g:airline#extensions#tabline#buffer_nr_show = 0 
-"let g:airline_theme = "hybrid"
-let g:airline_theme = "bubblegum"
+"let g:airline_theme = "bubblegum"
+let g:airline_theme = "solarized"

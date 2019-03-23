@@ -10,9 +10,14 @@ set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*/node_modules/*,*/vendor/*,*/lib/*,*/d
 set wildignore+=*\\tmp\\*,*.swp,*.zip,*.exe  " Windows
 
 "let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
-let g:ctrlp_custom_ignore = {
-            \ 'dir':  '\v[\/]\.(git|hg|svn|node_modules|vendor)$',
-            \ 'file': '\v\.(exe|so|dll)$',
-            \ 'link': 'some_bad_symbolic_links'
-            \ }
+"let g:ctrlp_custom_ignore = {
+            "\ 'dir':  '\v[\/](\.git|\.hg|\.svn|node_modules|vendor)$',
+            "\ 'file': '\.(exe|so|dll)$',
+            "\ 'link': 'some_bad_symbolic_links'
+            "\ }
+"let g:ctrlp_custom_ignore = {
+  "\ 'dir':  'node_modules$|\.git$\|\.hg$\|\.svn$\|\.yardoc$',
+  "\ 'file': '\.exe$\|\.so$\|\.dat$'
+  "\ }
+let g:ctrlp_custom_ignore = { 'dir': 'build$\|node_modules$' }
 call ctrlp_bdelete#init()
