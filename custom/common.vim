@@ -24,10 +24,10 @@ set guioptions-=l
 set completeopt=""
 
 if !has('gui_running')
-    set t_Co=256
+    "set t_Co=256
 else
     if has('mac')
-        set transparency=4  
+        "set transparency=4  
     endif
     set guifont=DejaVu\ Sans\ Mono\ for\ Powerline:h12
     set guioptions-=L
@@ -37,8 +37,8 @@ endif
 au FocusGained,BufEnter * :silent! !
 
 
-set hlsearch
 nnoremap <silent> <leader>l :noh<cr> "Stop highlight after searching
-set incsearch
-set showmatch
 
+set nolazyredraw
+" disable continuation of comments to the next line
+autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o

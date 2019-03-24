@@ -8,8 +8,8 @@ nnoremap <c-h> <c-w>h
 nnoremap <c-l> <c-w>l
 
 " bind \ (backward slash) to grep shortcut  
-command! -nargs=+ -complete=file -bar Ag silent! grep!   <args>|cwindow|redraw!
- nnoremap \ :Ag<SPACE>
+"command! -nargs=+ -complete=file -bar Ag silent! grep!   <args>|cwindow|redraw!
+" nnoremap \ :Ag<SPACE>
 
 "Map Ctrl + S to save in any mode
 noremap <silent>  <C-S>   :update<CR>
@@ -25,9 +25,9 @@ nnoremap <silent> <Left> :vertical resize -5<cr>
 nnoremap <silent> <Up> :resize +5<cr>
 nnoremap <silent> <Down> :resize -5<cr>
 
-nnoremap [b :bp<CR>
-nnoremap ]b :bn<CR>
-
+nnoremap <S-Tab> :bp<CR>
+nnoremap <Tab> :bn<CR>
+nnoremap <leader>x :bdelete<CR>
 
 " nerdtree setting
 noremap <C-k><C-b> :NERDTreeToggle<cr> " session插件使用时会有目录停留在原来session中
@@ -35,9 +35,11 @@ noremap <C-k><C-b> :NERDTreeToggle<cr> " session插件使用时会有目录停�
 "noremap <C-k><C-x> :NERDTreeClose<cr>
 
 " ctrlP keybind 
-let g:ctrlp_map = '<c-p>'
-let g:ctrlp_cmd = 'CtrlP'
-noremap <leader>b :CtrlPBuffer<cr>
-noremap <leader>p :ClearCtrlPCache<cr>
+"let g:ctrlp_map = '<c-p>'
+"let g:ctrlp_cmd = 'CtrlP'
+"noremap <leader>b :CtrlPBuffer<cr>
+"noremap <leader>p :ClearCtrlPCache<cr>
+
+noremap <silent> <leader>b :Buffers<cr>
 
 
