@@ -1,0 +1,22 @@
+{
+	"suggest.triggerAfterInsertEnter": true,
+	"suggest.noselect": false,
+	"suggest.timeout": 500,
+	"suggest.snippetIndicator": "💥",
+	"diagnostic.virtualText": true,
+    "tsserver.enable": true,
+	"languageserver": {
+        "golang": {
+            "command": "bingo",
+            "args": ["--diagnostics-style=instant","-format-style=goimports"],
+            "rootPatterns": ["go.mod", ".vim/", ".git/", ".hg/"],
+            "filetypes": ["go"]
+        },
+        "phplang": {
+            "command": "php",
+            "args": ["/Users/shien/.composer/vendor/bin/php-language-server.php","--memory-limit=512M"],
+            "filetypes": ["php"]
+        }
+	}
+}
+

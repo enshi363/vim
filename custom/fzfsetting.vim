@@ -13,7 +13,7 @@ let g:fzf_colors =
   \ 'marker':  ['fg', 'Keyword'],
   \ 'spinner': ['fg', 'Label'],
   \ 'header':  ['fg', 'Comment'] }
-nnoremap <c-p> :Files<cr>
+nnoremap <c-p> :GitFiles<cr>
 
 " 定义ag搜索
 command! -bang -nargs=* Ag
