@@ -64,12 +64,14 @@ vmap <leader>a  <Plug>(coc-codeaction-selected)
 nmap <leader>a  <Plug>(coc-codeaction-selected)
 
 " Remap for do codeAction of current line
-nmap <leader>ac  <Plug>(coc-codeaction)
+nmap <silent> ac  <Plug>(coc-codeaction)
 " Fix autofix problem of current line
-nmap <leader>qf  <Plug>(coc-fix-current)
+nmap <silent> qf  <Plug>(coc-fix-current)
 
 " Use `:Format` for format current buffer
 command! -nargs=0 Format :call CocAction('format')
+" fomat on save
+autocmd BufWritePre *.go :call CocAction('format')
 
 " Use `:Fold` for fold current buffer
 command! -nargs=? Fold :call     CocAction('fold', <f-args>)
@@ -77,16 +79,25 @@ command! -nargs=? Fold :call     CocAction('fold', <f-args>)
 
 " Add diagnostic info for https://github.com/itchyny/lightline.vim
 let g:lightline = {
-      \ 'colorscheme': 'wombat',
+      \ 'colorscheme': 'solarized',
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ],
-      \             [ 'cocstatus', 'readonly', 'filename', 'modified' ] ]
+      \             [ 'gitbranch','cocstatus', 'readonly', 'filename', 'modified' ] ]
+      \ },
+      \ 'component': {
+      \     'lineinfo': ' %3l:%-2v',
       \ },
       \ 'component_function': {
-      \   'cocstatus': 'coc#status'
+      \   'cocstatus': 'coc#status',
+      \   'gitbranch': 'fugitive#head',
       \ },
       \ }
-
+let g:lightline.separator = {
+  \   'left': '', 'right': ''
+  \}
+let g:lightline.subseparator = {
+  \   'left': '', 'right': '' 
+  \}
 
 
 " Using CocList
@@ -106,3 +117,20 @@ nnoremap <silent> <space>j  :<C-u>CocNext<CR>
 nnoremap <silent> <space>k  :<C-u>CocPrev<CR>
 " Resume latest coc list
 nnoremap <silent> <space>p  :<C-u>CocListResume<CR>
+
+
+
+
+inoremap <silent><expr> <TAB>
+      \ pumvisible() ? coc#_select_confirm() :
+      \ coc#expandableOrJumpable() ? coc#rpc#request('doKeymap', ['snippets-expand-jump','']) :
+      \ <SID>check_back_space() ? "\<TAB>" :
+      \ coc#refresh()
+
+function! s:check_back_space() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~# '\s'
+endfunction
+
+let g:airline_section_error = '%{airline#util#wrap(airline#extensions#coc#get_error(),0)}'
+let g:airline_section_warning = '%{airline#util#wrap(airline#extensions#coc#get_warning(),0)}'
