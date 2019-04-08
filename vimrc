@@ -17,7 +17,6 @@ Plug 'flazz/vim-colorschemes'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'scrooloose/nerdtree' , { 'on':  'NERDTreeToggle' }
-"Plug 'ctrlpvim/ctrlp.vim'
 Plug 'terryma/vim-multiple-cursors'
 "Plug 'rking/ag.vim'
 Plug 'mattn/emmet-vim'
@@ -29,7 +28,6 @@ Plug 'tpope/vim-surround'
 Plug 'xolox/vim-misc'
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
-"Plug 'd11wtq/ctrlp_bdelete.vim'
 Plug 'isRuslan/vim-es6'
 Plug 'godlygeek/tabular'
 Plug 'plasticboy/vim-markdown' ,{ 'for': 'markdown' }
@@ -37,6 +35,7 @@ Plug 'shougo/vimproc.vim' ,{ 'do': 'make' }
 Plug 'leafgarland/typescript-vim'
 Plug 'fatih/vim-go', { 'tag': '*' ,'do': ':GoInstallBinaries' }
 Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}}
+
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 
