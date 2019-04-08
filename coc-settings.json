@@ -7,8 +7,8 @@
     "tsserver.enable": true,
 	"languageserver": {
         "golang": {
-            "command": "bingo",
-            "args": ["--diagnostics-style=instant","-format-style=goimports"],
+            "command": "gopls",
+            "args": ["serve"],
             "rootPatterns": ["go.mod", ".vim/", ".git/", ".hg/"],
             "filetypes": ["go"]
         },
