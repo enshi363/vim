@@ -1,11 +1,11 @@
 {
-	"suggest.triggerAfterInsertEnter": true,
-	"suggest.noselect": false,
-	"suggest.timeout": 500,
-	"suggest.snippetIndicator": "💥",
-	"diagnostic.virtualText": true,
+    "suggest.triggerAfterInsertEnter": true,
+    "suggest.noselect": false,
+    "suggest.timeout": 500,
+    "suggest.snippetIndicator": "💥",
+    "diagnostic.virtualText": true,
     "tsserver.enable": true,
-	"languageserver": {
+    "languageserver": {
         "golang": {
             "command": "gopls",
             "args": ["serve"],
@@ -16,7 +16,19 @@
             "command": "php",
             "args": ["/Users/shien/.composer/vendor/bin/php-language-server.php","--memory-limit=512M"],
             "filetypes": ["php"]
+        },
+        "dart": {
+            "command": "dart_language_server", 
+            "args": [],
+            "filetypes": ["dart"],
+            "initializationOptions": {},
+            "settings": {
+                "dart": {
+                    "validation": {},
+                    "completion": {}
+                }
+            }
         }
-	}
+    }
 }
 
