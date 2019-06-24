@@ -77,27 +77,7 @@ autocmd BufWritePre *.go :call CocAction('format')
 command! -nargs=? Fold :call     CocAction('fold', <f-args>)
 
 
-" Add diagnostic info for https://github.com/itchyny/lightline.vim
-let g:lightline = {
-      \ 'colorscheme': 'solarized',
-      \ 'active': {
-      \   'left': [ [ 'mode', 'paste' ],
-      \             [ 'gitbranch','cocstatus', 'readonly', 'filename', 'modified' ] ]
-      \ },
-      \ 'component': {
-      \     'lineinfo': ' %3l:%-2v',
-      \ },
-      \ 'component_function': {
-      \   'cocstatus': 'coc#status',
-      \   'gitbranch': 'fugitive#head',
-      \ },
-      \ }
-let g:lightline.separator = {
-  \   'left': '', 'right': ''
-  \}
-let g:lightline.subseparator = {
-  \   'left': '', 'right': '' 
-  \}
+
 
 
 " Using CocList

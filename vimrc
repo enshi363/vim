@@ -14,7 +14,7 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'junegunn/vim-easy-align'
 Plug 'flazz/vim-colorschemes'
-Plug 'scrooloose/nerdtree' , { 'on':  'NERDTreeToggle' }
+"Plug 'scrooloose/nerdtree' , { 'on':  'NERDTreeToggle' }
 Plug 'terryma/vim-multiple-cursors'
 "Plug 'rking/ag.vim'
 Plug 'mattn/emmet-vim'
@@ -38,6 +38,14 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'itchyny/lightline.vim'
 Plug 'dart-lang/dart-vim-plugin'
+if has('nvim')
+  Plug 'Shougo/defx.nvim', { 'do': ':UpdateRemotePlugins' }
+else
+  Plug 'Shougo/defx.nvim'
+  Plug 'roxma/nvim-yarp'
+  Plug 'roxma/vim-hug-neovim-rpc'
+endif
+Plug 'mengelbrecht/lightline-bufferline'
 
 
 call plug#end()            " required

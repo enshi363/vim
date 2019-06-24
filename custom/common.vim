@@ -42,3 +42,4 @@ nnoremap <silent> <leader>l :noh<cr> "Stop highlight after searching
 set nolazyredraw
 " disable continuation of comments to the next line
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
+
