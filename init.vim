@@ -1,1 +1,1 @@
-/Users/shien/.vim/vimrc
+./vimrc
