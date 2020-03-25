@@ -5,9 +5,9 @@ if empty(glob('~/.vim/autoload/plug.vim'))
     \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
   autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
-if has('pythonx') 
-    let g:python3_host_prog='/opt/local/bin/python3.7'
-endif
+"if has('pythonx') 
+    "let g:python3_host_prog='/opt/local/bin/python3.8'
+"endif
 " set the runtime path to include Vundle and initialize
 " source ~/.vim/vimPlug/plug.vim
 call plug#begin('~/.vim/plugged')
@@ -46,7 +46,8 @@ else
   Plug 'roxma/vim-hug-neovim-rpc'
 endif
 Plug 'mengelbrecht/lightline-bufferline'
-
+Plug 'justinmk/vim-sneak'
+Plug 'aquach/vim-http-client'
 
 call plug#end()            " required
 let g:deoplete#enable_at_startup = 1
