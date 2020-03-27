@@ -1,12 +1,13 @@
 " theme setting 
 
 "colorscheme hybrid_material  
-colorscheme solarized8_dark_flat
+"colorscheme solarized8_dark_flat
+colorscheme solarized8_dark_low
 "set background=dark
 let g:enable_bold_font = 1
-hi Normal ctermfg=252 ctermbg=none
+"hi Normal ctermfg=252 ctermbg=none
 "hi CursorLine   ctermbg=none cterm=none
-hi CursorLine  cterm=NONE gui=NONE ctermfg=NONE guifg=NONE ctermbg=0 guibg=#073642 guisp=#93a1a1 
+hi CursorLine term=bold cterm=bold ctermbg=8
 
 "airline setting-----------
 set encoding=utf-8

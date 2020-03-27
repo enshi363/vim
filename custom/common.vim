@@ -23,15 +23,15 @@ set guioptions-=r
 set guioptions-=l
 set completeopt=""
 
-if !has('gui_running')
+"if !has('gui_running')
     "set t_Co=256
-else
-    if has('mac')
+"else
+    "if has('mac')
         "set transparency=4  
-    endif
-    set guifont=DejaVu\ Sans\ Mono\ for\ Powerline:h12
-    set guioptions-=L
-endif
+    "endif
+    "set guifont=DejaVu\ Sans\ Mono\ for\ Powerline:h12
+    "set guioptions-=L
+"endif
 
 " Trigger autoread when changing buffers or coming back to vim in terminal.
 au FocusGained,BufEnter * :silent! !
