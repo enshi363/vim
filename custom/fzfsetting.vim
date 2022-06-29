@@ -15,6 +15,7 @@ let g:fzf_colors =
   \ 'header':  ['fg', 'Comment'] }
 nnoremap <c-p> :GitFiles<cr>
 
+let g:fzf_preview_window = []
 " 定义ag搜索
 command! -bang -nargs=* Ag
   \ call fzf#vim#ag(<q-args>,

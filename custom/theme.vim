@@ -2,12 +2,13 @@
 
 "colorscheme hybrid_material  
 "colorscheme solarized8_dark_flat
-colorscheme solarized8_dark_low
+"colorscheme solarized8_dark_low
+colorscheme nord 
 "set background=dark
 let g:enable_bold_font = 1
 "hi Normal ctermfg=252 ctermbg=none
 "hi CursorLine   ctermbg=none cterm=none
-hi CursorLine term=bold cterm=bold ctermbg=8
+"hi CursorLine term=bold cterm=bold ctermbg=8
 
 "airline setting-----------
 set encoding=utf-8
