@@ -1,5 +1,6 @@
 " common setting
 syntax on
+set noswapfile
 set backspace=2 " Backspace deletes like most programs in insert mode
 set autoread " Reload files changed outside vim
 set number
