@@ -17,7 +17,7 @@ Plug 'junegunn/vim-easy-align'
 "Plug 'flazz/vim-colorschemes'
 Plug 'scrooloose/nerdtree' , { 'on':  'NERDTreeToggle' }
 Plug 'terryma/vim-multiple-cursors'
-"Plug 'rking/ag.vim'
+Plug 'rking/ag.vim'
 Plug 'mattn/emmet-vim'
 Plug 'pangloss/vim-javascript'
 Plug 'stanangeloff/php.vim'
@@ -32,7 +32,7 @@ Plug 'godlygeek/tabular'
 Plug 'plasticboy/vim-markdown' ,{ 'for': 'markdown' }
 "Plug 'shougo/vimproc.vim' ,{ 'do': 'make' }
 Plug 'leafgarland/typescript-vim'
-"Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
+Plug 'fatih/vim-go'
 Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}}
 
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
@@ -42,6 +42,7 @@ Plug 'dart-lang/dart-vim-plugin'
 
 Plug 'mengelbrecht/lightline-bufferline'
 Plug 'justinmk/vim-sneak'
+Plug 'voldikss/vim-floaterm'
 "Plug 'aquach/vim-http-client'
 
 call plug#end()            " required
@@ -51,6 +52,7 @@ for f in split(glob('~/.vim/custom/*.vim'), '\n')
 endfor
 
 set laststatus=2
+
 """ add to zsh file 
 "export FZF_DEFAULT_COMMAND='ag -g ""'                                                                                                                   
 "export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"

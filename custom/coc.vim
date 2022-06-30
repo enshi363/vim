@@ -11,7 +11,7 @@ set shortmess+=c
 " always show signcolumns
 set signcolumn=yes
 
-autocmd FileType json syntax match Comment +\/\/.\+$+
+"autocmd FileType json syntax match Comment +\/\/.\+$+
 
 " Use <c-space> for trigger completion.
 inoremap <silent><expr> <c-space> coc#refresh()
@@ -32,6 +32,8 @@ nmap <silent> gr <Plug>(coc-references)
 
 " Use K for show documentation in preview window
 nnoremap <silent> K :call <SID>show_documentation()<CR>
+
+let g:coc_global_extensions = ['coc-json', 'coc-git','coc-go','coc-tsserver']
 
 function! s:show_documentation()
   if &filetype == 'vim'

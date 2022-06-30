@@ -18,7 +18,7 @@ set novisualbell
 set hidden
 set guioptions-=T
 set guioptions-=m
-"set t_Co=256
+set t_Co=256
 set guioptions-=r
 set guioptions-=l
 set completeopt=""

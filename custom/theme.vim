@@ -5,7 +5,8 @@
 "colorscheme solarized8_dark_low
 colorscheme nord 
 "set background=dark
-let g:enable_bold_font = 1
+"let g:enable_bold_font = 0 
+let g:nord_bold = 0
 "hi Normal ctermfg=252 ctermbg=none
 "hi CursorLine   ctermbg=none cterm=none
 "hi CursorLine term=bold cterm=bold ctermbg=8

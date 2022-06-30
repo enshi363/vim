@@ -1,4 +1,4 @@
-let g:fzf_layout = { 'down': '~25%' }
+"let g:fzf_layout = { 'down': '~25%' }
 let g:fzf_colors =
 \ { 'fg':      ['fg', 'Normal'],
   \ 'bg':      ['bg', 'Normal'],

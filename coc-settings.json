@@ -5,22 +5,42 @@
     "suggest.snippetIndicator": "💥",
     "diagnostic.virtualText": true,
     "tsserver.enable": true,
+    "colors.filetypes": [
+        "*"
+    ],
+    "coc.preferences.formatOnSaveFiletypes": [
+        "javascript",
+        "html",
+        "json",
+        "css",
+        "go"
+    ],
+    "coc.preferences.rootPatterns": [
+        ".git",
+        ".hg",
+        "go.mod",
+        ".projections.json"
+    ],
+    "highlight.colors.enable": true,
     "languageserver": {
-        "golang": {
-            "command": "gopls",
-            "args": ["serve"],
-            "rootPatterns": ["go.mod", ".vim/", ".git/", ".hg/"],
-            "filetypes": ["go"]
-        },
-        "phplang": {
-            "command": "php",
-            "args": ["/Users/shien/.composer/vendor/bin/php-language-server.php","--memory-limit=512M"],
-            "filetypes": ["php"]
+        "intelephense": {
+            "command": "intelephense",
+            "args": [
+                "--stdio"
+            ],
+            "filetypes": [
+                "php"
+            ],
+            "initializationOptions": {
+                "storagePath": "/tmp/intelephense"
+            }
         },
         "dart": {
-            "command": "dart_language_server", 
+            "command": "dart_language_server",
             "args": [],
-            "filetypes": ["dart"],
+            "filetypes": [
+                "dart"
+            ],
             "initializationOptions": {},
             "settings": {
                 "dart": {
@@ -31,4 +51,3 @@
         }
     }
 }
-
