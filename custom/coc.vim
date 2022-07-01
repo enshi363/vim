@@ -33,7 +33,7 @@ nmap <silent> gr <Plug>(coc-references)
 " Use K for show documentation in preview window
 nnoremap <silent> K :call <SID>show_documentation()<CR>
 
-let g:coc_global_extensions = ['coc-json', 'coc-git','coc-go','coc-tsserver']
+let g:coc_global_extensions = ['coc-json', 'coc-git','coc-go','coc-tsserver','coc-phpls']
 
 function! s:show_documentation()
   if &filetype == 'vim'
