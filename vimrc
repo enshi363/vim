@@ -15,7 +15,7 @@ call plug#begin('~/.vim/plugged')
 "Plug 'arcticicestudio/nord-vim'
 Plug 'junegunn/vim-easy-align'
 Plug 'flazz/vim-colorschemes'
-Plug 'scrooloose/nerdtree' , { 'on':  'NERDTreeToggle' }
+"Plug 'scrooloose/nerdtree' , { 'on':  'NERDTreeToggle' }
 Plug 'terryma/vim-multiple-cursors'
 Plug 'rking/ag.vim'
 Plug 'mattn/emmet-vim'

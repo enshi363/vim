@@ -30,9 +30,9 @@ nnoremap <Tab> :bn<CR>
 nnoremap <leader>x :bdelete<CR>
 
 " nerdtree setting
-noremap <C-k><C-b> :NERDTreeToggle<cr>  
-noremap <C-k><C-o> :NERDTree<cr>
-noremap <C-k><C-x> :NERDTreeClose<cr>
+"noremap <C-k><C-b> :NERDTreeToggle<cr>  
+"noremap <C-k><C-o> :NERDTree<cr>
+"noremap <C-k><C-x> :NERDTreeClose<cr>
 
 " ctrlP keybind 
 "let g:ctrlp_map = '<c-p>'
@@ -42,3 +42,4 @@ noremap <C-k><C-x> :NERDTreeClose<cr>
 
 noremap <silent> <leader>b :Buffers<cr>
 
+nmap <leader>e <Cmd>CocCommand explorer<CR>
