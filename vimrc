@@ -12,9 +12,9 @@ endif
 " source ~/.vim/vimPlug/plug.vim
 call plug#begin('~/.vim/plugged')
 
-"Plug 'arcticicestudio/nord-vim'
+Plug 'arcticicestudio/nord-vim'
 Plug 'junegunn/vim-easy-align'
-Plug 'flazz/vim-colorschemes'
+"Plug 'flazz/vim-colorschemes'
 "Plug 'scrooloose/nerdtree' , { 'on':  'NERDTreeToggle' }
 Plug 'terryma/vim-multiple-cursors'
 Plug 'rking/ag.vim'

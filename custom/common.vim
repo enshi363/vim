@@ -40,7 +40,9 @@ au FocusGained,BufEnter * :silent! !
 
 nnoremap <silent> <leader>l :noh<cr> "Stop highlight after searching
 
-set nolazyredraw
+"set nolazyredraw
+set lazyredraw
+set ttyfast 
 " disable continuation of comments to the next line
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 

@@ -2,7 +2,7 @@ set showtabline=2
 
 " Add diagnostic info for https://github.com/itchyny/lightline.vim
 let g:lightline = {
-      \ 'colorscheme': 'solarized',
+      \ 'colorscheme': 'nord',
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ],
       \             [ 'gitbranch','cocstatus', 'readonly', 'filename', 'modified' ] ]
@@ -16,24 +16,24 @@ let g:lightline = {
       \   'gitbranch': 'fugitive#head',
       \ },
       \ }
-"let g:lightline.separator = {
-  "\   'left': '', 'right': ''
-  "\}
-"let g:lightline.subseparator = {
-  "\   'left': '', 'right': '' 
-  "\}
+let g:lightline.separator = {
+  \   'left': '', 'right': ''
+  \}
+let g:lightline.subseparator = {
+  \   'left': '', 'right': '' 
+  \}
 "let g:lightline.subseparator = {
   "\   'left': '|', 'right': '|' 
   "\}
 "let g:lightline.separator = {
   "\   'left': '', 'right': ''
   "\}
-let g:lightline.subseparator = {
-  \   'left': '', 'right': '' 
-  \}
-let g:lightline.separator = {
-  \   'left': '', 'right': ''
-  \}
+"let g:lightline.subseparator = {
+  "\   'left': '', 'right': '' 
+  "\}
+"let g:lightline.separator = {
+  "\   'left': '', 'right': ''
+  "\}
 
 let g:lightline.tabline          = {'left': [['buffers']], 'right': [['w']]}
 let g:lightline.component_expand = {'buffers': 'lightline#bufferline#buffers'}
