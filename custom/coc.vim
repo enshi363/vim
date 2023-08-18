@@ -33,7 +33,7 @@ nmap <silent> gr <Plug>(coc-references)
 " Use K for show documentation in preview window
 nnoremap <silent> K :call <SID>show_documentation()<CR>
 
-let g:coc_global_extensions = ['coc-json', 'coc-git','coc-go','coc-tsserver','coc-phpls','coc-explorer']
+let g:coc_global_extensions = ['coc-json', 'coc-git','coc-go','coc-tsserver','coc-phpls','coc-explorer','coc-snippets','coc-emmet']
 
 function! s:show_documentation()
   if &filetype == 'vim'
@@ -103,16 +103,16 @@ nnoremap <silent> <space>p  :<C-u>CocListResume<CR>
 
 
 
-inoremap <silent><expr> <TAB>
-      \ pumvisible() ? coc#_select_confirm() :
-      \ coc#expandableOrJumpable() ? coc#rpc#request('doKeymap', ['snippets-expand-jump','']) :
-      \ <SID>check_back_space() ? "\<TAB>" :
-      \ coc#refresh()
+" inoremap <silent><expr> <TAB>
+"       \ pumvisible() ? coc#_select_confirm() :
+"       \ coc#expandableOrJumpable() ? coc#rpc#request('doKeymap', ['snippets-expand-jump','']) :
+"       \ <SID>check_back_space() ? "\<TAB>" :
+"       \ coc#refresh()
 
 function! s:check_back_space() abort
   let col = col('.') - 1
   return !col || getline('.')[col - 1]  =~# '\s'
 endfunction
 
-let g:airline_section_error = '%{airline#util#wrap(airline#extensions#coc#get_error(),0)}'
-let g:airline_section_warning = '%{airline#util#wrap(airline#extensions#coc#get_warning(),0)}'
+" let g:airline_section_error = '%{airline#util#wrap(airline#extensions#coc#get_error(),0)}'
+" let g:airline_section_warning = '%{airline#util#wrap(airline#extensions#coc#get_warning(),0)}'

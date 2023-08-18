@@ -12,13 +12,12 @@ endif
 " source ~/.vim/vimPlug/plug.vim
 call plug#begin('~/.vim/plugged')
 
-Plug 'arcticicestudio/nord-vim'
 Plug 'junegunn/vim-easy-align'
 "Plug 'flazz/vim-colorschemes'
 "Plug 'scrooloose/nerdtree' , { 'on':  'NERDTreeToggle' }
 Plug 'terryma/vim-multiple-cursors'
-Plug 'rking/ag.vim'
-Plug 'mattn/emmet-vim'
+"Plug 'rking/ag.vim'
+"Plug 'mattn/emmet-vim'
 Plug 'pangloss/vim-javascript'
 Plug 'stanangeloff/php.vim'
 Plug 'tpope/vim-fugitive'
@@ -44,6 +43,7 @@ Plug 'mengelbrecht/lightline-bufferline'
 Plug 'justinmk/vim-sneak'
 Plug 'voldikss/vim-floaterm'
 "Plug 'aquach/vim-http-client'
+Plug 'joshdick/onedark.vim'
 
 call plug#end()            " required
 let g:deoplete#enable_at_startup = 1

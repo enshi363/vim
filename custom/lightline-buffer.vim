@@ -2,7 +2,7 @@ set showtabline=2
 
 " Add diagnostic info for https://github.com/itchyny/lightline.vim
 let g:lightline = {
-      \ 'colorscheme': 'nord',
+      \ 'colorscheme': 'one',
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ],
       \             [ 'gitbranch','cocstatus', 'readonly', 'filename', 'modified' ] ]
