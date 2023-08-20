@@ -17,7 +17,7 @@
 nnoremap <c-p> :GitFiles<cr>
 nnoremap <silent> <C-f> :Files<CR>
 
-let g:fzf_preview_window = []
+" let g:fzf_preview_window = []
 " 定义ag搜索
 "command! -bang -nargs=* Ag
   "\ call fzf#vim#ag(<q-args>,

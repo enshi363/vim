@@ -1,0 +1,20 @@
+let  g:ale_completion_enabled = 1
+let  g:ale_hover_to_floating_preview= 1
+let g:ale_floating_window_border = ['│', '─', '╭', '╮', '╯', '╰', '│', '─']
+
+
+
+nmap <silent> gd <Plug>(ale_go_to_definition)
+
+nmap <silent> <[c> <Plug>(ale_previous_wrap)
+nmap <silent> <]c> <Plug>(ale_next_wrap)
+
+nnoremap <silent> K :call <SID>show_documentation()<CR>
+
+function! s:show_documentation()
+  if &filetype == 'vim'
+    execute 'h '.expand('<cword>')
+  else
+    ALEHover 
+  endif
+endfunction

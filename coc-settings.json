@@ -1,4 +1,10 @@
 {
+  "workspace.ignoredFolders": [
+    "$HOME",
+    "$HOME/.cargo/**",
+    "$HOME/.rustup/**"
+  ],
+  "explorer.icon.enableNerdfont": true,
     "suggest.triggerAfterInsertEnter": true,
     "suggest.noselect": false,
     "suggest.timeout": 500,

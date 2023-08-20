@@ -18,21 +18,22 @@ Plug 'junegunn/vim-easy-align'
 Plug 'terryma/vim-multiple-cursors'
 "Plug 'rking/ag.vim'
 "Plug 'mattn/emmet-vim'
-Plug 'pangloss/vim-javascript'
-Plug 'stanangeloff/php.vim'
+" Plug 'pangloss/vim-javascript'
+" Plug 'stanangeloff/php.vim'
 Plug 'tpope/vim-fugitive'
 Plug 'scrooloose/nerdcommenter'
 Plug 'tpope/vim-surround'
 Plug 'xolox/vim-misc'
 "Plug 'SirVer/ultisnips'
-Plug 'honza/vim-snippets'
-Plug 'isRuslan/vim-es6'
-Plug 'godlygeek/tabular'
+" Plug 'honza/vim-snippets'
+" Plug 'isRuslan/vim-es6'
+" Plug 'godlygeek/tabular'
 Plug 'plasticboy/vim-markdown' ,{ 'for': 'markdown' }
 "Plug 'shougo/vimproc.vim' ,{ 'do': 'make' }
 Plug 'leafgarland/typescript-vim'
-Plug 'fatih/vim-go'
+" Plug 'fatih/vim-go'
 Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}}
+" Plug 'dense-analysis/ale'
 
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
@@ -44,6 +45,7 @@ Plug 'justinmk/vim-sneak'
 Plug 'voldikss/vim-floaterm'
 "Plug 'aquach/vim-http-client'
 Plug 'joshdick/onedark.vim'
+Plug 'ryanoasis/vim-devicons'
 
 call plug#end()            " required
 let g:deoplete#enable_at_startup = 1
