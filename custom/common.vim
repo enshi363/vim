@@ -7,7 +7,7 @@ set number
 set cursorline
 set ruler
 set tabstop=4 shiftwidth=4 expandtab
-set autochdir
+"set autochdir
 set incsearch
 set hlsearch
 set showmatch

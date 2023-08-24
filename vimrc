@@ -47,6 +47,8 @@ Plug 'voldikss/vim-floaterm'
 Plug 'joshdick/onedark.vim'
 Plug 'ryanoasis/vim-devicons'
 
+Plug 'mcchrish/nnn.vim'
+
 call plug#end()            " required
 let g:deoplete#enable_at_startup = 1
 for f in split(glob('~/.vim/custom/*.vim'), '\n')

@@ -33,7 +33,7 @@ nmap <silent> gr <Plug>(coc-references)
 " Use K for show documentation in preview window
 nnoremap <silent> K :call <SID>show_documentation()<CR>
 
-let g:coc_global_extensions = ['coc-json', 'coc-git','coc-go','coc-tsserver','coc-phpls','coc-explorer','coc-snippets','coc-emmet','coc-rust-analyzer','coc-yaml','coc-toml']
+let g:coc_global_extensions = ['coc-json', 'coc-git','coc-go','coc-tsserver','coc-phpls','coc-snippets','coc-emmet','coc-rust-analyzer','coc-yaml','coc-toml']
 
 function! s:show_documentation()
   if &filetype == 'vim'
@@ -73,13 +73,10 @@ nmap <silent> qf  <Plug>(coc-fix-current)
 " Use `:Format` for format current buffer
 command! -nargs=0 Format :call CocAction('format')
 " fomat on save
-autocmd BufWritePre *.go :call CocAction('format')
+"autocmd BufWritePre *.go :call CocAction('format')
 
 " Use `:Fold` for fold current buffer
 command! -nargs=? Fold :call     CocAction('fold', <f-args>)
-
-
-
 
 
 " Using CocList
@@ -100,6 +97,10 @@ nnoremap <silent> <space>k  :<C-u>CocPrev<CR>
 " Resume latest coc list
 nnoremap <silent> <space>p  :<C-u>CocListResume<CR>
 
+" files
+" nnoremap <c-p> :<C-u>CocList files -F <cr>
+" " grep 
+" nnoremap \ :<C-u>CocList grep -F  
 
 
 
@@ -109,10 +110,26 @@ nnoremap <silent> <space>p  :<C-u>CocListResume<CR>
 "       \ <SID>check_back_space() ? "\<TAB>" :
 "       \ coc#refresh()
 
-function! s:check_back_space() abort
-  let col = col('.') - 1
-  return !col || getline('.')[col - 1]  =~# '\s'
-endfunction
-
-" let g:airline_section_error = '%{airline#util#wrap(airline#extensions#coc#get_error(),0)}'
-" let g:airline_section_warning = '%{airline#util#wrap(airline#extensions#coc#get_warning(),0)}'
+" function! s:check_back_space() abort
+"   let col = col('.') - 1
+"   return !col || getline('.')[col - 1]  =~# '\s'
+" endfunction
+"
+" vnoremap <leader>gr :<C-u>call <SID>GrepFromSelected(visualmode())<CR>
+" nnoremap <leader>gr :<C-u>set operatorfunc=<SID>GrepFromSelected<CR>g@
+"
+" function! s:GrepFromSelected(type)
+"   let saved_unnamed_register = @@
+"   if a:type ==# 'v'
+"     normal! `<v`>y
+"   elseif a:type ==# 'char'
+"     normal! `[v`]y
+"   else
+"     return
+"   endif
+"   let word = substitute(@@, '\n$', '', 'g')
+"   let word = escape(word, '| ')
+"   let @@ = saved_unnamed_register
+"   execute 'CocList grep '.word
+" endfunction
+"

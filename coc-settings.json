@@ -4,6 +4,25 @@
     "$HOME/.cargo/**",
     "$HOME/.rustup/**"
   ],
+  "list.source.files.excludePatterns":[
+    "**/.git/**/*",
+    "**/.node_modules/**/*",
+    "**/vendor/**/*",
+    "**/dist/**/*",
+  ],
+  "list.source.mru.excludePatterns":[
+    "**/.git/*",
+    "**/.node_modules/*",
+    "**/vendor/*",
+    "**/dist/*",
+  ],
+  "list.source.grep.excludePatterns":[
+    "**/.git/**/*",
+    "**/.node_modules/**/*",
+    "**/vendor/**/*",
+    "**/dist/**/*",
+  ],
+  "list.source.files.args": ["--hidden","--files"],
   "explorer.icon.enableNerdfont": true,
     "suggest.triggerAfterInsertEnter": true,
     "suggest.noselect": false,

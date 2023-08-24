@@ -40,6 +40,6 @@ nnoremap <leader>x :bdelete<CR>
 "noremap <leader>b :CtrlPBuffer<cr>
 "noremap <leader>p :ClearCtrlPCache<cr>
 
-noremap <silent> <leader>b :Buffers<cr>
+"noremap <silent> <leader>b :Buffers<cr>
 
-nmap <leader>e <Cmd>CocCommand explorer<CR>
+"nmap <leader>e <Cmd>CocCommand explorer<CR>

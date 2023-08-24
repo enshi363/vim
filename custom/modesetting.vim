@@ -15,8 +15,8 @@ map asdf <Plug>Markdown_MoveToParentHeader
 
 " emmet setting
 " only enable for html css
-let g:user_emmet_install_global = 0
-autocmd FileType html,css EmmetInstall
+" let g:user_emmet_install_global = 0
+" autocmd FileType html,css EmmetInstall
 
 " javascript setting
 let g:javascript_enable_domhtmlcss=1
