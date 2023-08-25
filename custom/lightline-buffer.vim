@@ -9,11 +9,11 @@ let g:lightline = {
       \ },
       \ 'component': {
       \     'lineinfo': ' %3l:%-2v',
-      \     'w':'巧克力vs奶粉'
+      \     'w':'kk'
       \ },
       \ 'component_function': {
       \   'cocstatus': 'coc#status',
-      \   'gitbranch': 'fugitive#head',
+      \   'gitbranch': 'FugitiveHead',
       \ },
       \ }
 "let g:lightline.separator = {
@@ -22,18 +22,18 @@ let g:lightline = {
 "let g:lightline.subseparator = {
   "\   'left': '', 'right': '' 
   "\}
-let g:lightline.subseparator = {
-  \   'left': '|', 'right': '|' 
-  \}
-let g:lightline.separator = {
-  \   'left': '', 'right': ''
-  \}
 "let g:lightline.subseparator = {
-  "\   'left': '', 'right': '' 
+  "\   'left': '|', 'right': '|' 
   "\}
 "let g:lightline.separator = {
-  "\   'left': '', 'right': '`
+  "\   'left': '', 'right': ''
   "\}
+let g:lightline.subseparator = {
+  \   'left': '', 'right': '' 
+  \}
+let g:lightline.separator = {
+  \   'left': '', 'right': ''
+  \}
 
 let g:lightline.tabline          = {'left': [['buffers']], 'right': [['w']]}
 let g:lightline.component_expand = {'buffers': 'lightline#bufferline#buffers'}
