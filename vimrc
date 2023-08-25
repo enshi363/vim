@@ -44,13 +44,14 @@ Plug 'mengelbrecht/lightline-bufferline'
 Plug 'justinmk/vim-sneak'
 Plug 'voldikss/vim-floaterm'
 "Plug 'aquach/vim-http-client'
-Plug 'joshdick/onedark.vim'
+" Plug 'joshdick/onedark.vim'
+Plug 'sainnhe/sonokai'
 Plug 'ryanoasis/vim-devicons'
 
 Plug 'mcchrish/nnn.vim'
 
 call plug#end()            " required
-let g:deoplete#enable_at_startup = 1
+" let g:deoplete#enable_at_startup = 1
 for f in split(glob('~/.vim/custom/*.vim'), '\n')
     exe 'source' f
 endfor
