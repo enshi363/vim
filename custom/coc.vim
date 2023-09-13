@@ -33,7 +33,7 @@ nmap <silent> gr <Plug>(coc-references)
 " Use K for show documentation in preview window
 nnoremap <silent> K :call <SID>show_documentation()<CR>
 
-let g:coc_global_extensions = ['coc-json', 'coc-git','coc-go','coc-tsserver','coc-phpls','coc-snippets','coc-emmet','coc-rust-analyzer','coc-yaml','coc-toml']
+let g:coc_global_extensions = ['coc-json', 'coc-git','coc-go','coc-tsserver','coc-phpls','coc-snippets','coc-emmet','coc-rust-analyzer','coc-yaml','coc-toml','coc-explorer']
 
 function! s:show_documentation()
   if &filetype == 'vim'
@@ -132,4 +132,5 @@ nnoremap <silent> <space>p  :<C-u>CocListResume<CR>
 "   let @@ = saved_unnamed_register
 "   execute 'CocList grep '.word
 " endfunction
+"
 "

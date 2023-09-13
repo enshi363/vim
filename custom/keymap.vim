@@ -42,4 +42,4 @@ nnoremap <leader>x :bdelete<CR>
 
 "noremap <silent> <leader>b :Buffers<cr>
 
-"nmap <leader>e <Cmd>CocCommand explorer<CR>
+nmap <leader>b <Cmd>CocCommand explorer<CR>
