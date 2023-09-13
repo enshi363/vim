@@ -23,6 +23,7 @@ set t_Co=256
 set guioptions-=r
 set guioptions-=l
 set completeopt=""
+set noerrorbells visualbell t_vb=
 
 "if !has('gui_running')
     "set t_Co=256

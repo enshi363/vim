@@ -1,5 +1,19 @@
 set showtabline=2
 
+function MyFugitiveHead()
+  let head = FugitiveHead()
+  if head != ""
+    let head = "\uf126 " .. head
+  endif
+  return head
+endfunction
+
+function! CocCurrentFunction()
+    return get(b:, 'coc_current_function', '')
+endfunction
+
+
+
 " Add diagnostic info for https://github.com/itchyny/lightline.vim
 let g:lightline = {
       \ 'colorscheme': 'sonokai',
@@ -9,11 +23,12 @@ let g:lightline = {
       \ },
       \ 'component': {
       \     'lineinfo': ' %3l:%-2v',
-      \     'w':'kk'
+      "\     'w':'kk'
       \ },
       \ 'component_function': {
       \   'cocstatus': 'coc#status',
-      \   'gitbranch': 'FugitiveHead',
+      \   'currentfunction': 'CocCurrentFunction',
+      \   'gitbranch': 'MyFugitiveHead',
       \ },
       \ }
 "let g:lightline.separator = {
@@ -34,6 +49,7 @@ let g:lightline.subseparator = {
 let g:lightline.separator = {
   \   'left': '', 'right': ''
   \}
+
 
 let g:lightline.tabline          = {'left': [['buffers']], 'right': [['w']]}
 let g:lightline.component_expand = {'buffers': 'lightline#bufferline#buffers'}
