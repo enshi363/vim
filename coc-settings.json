@@ -27,7 +27,7 @@
     "suggest.triggerAfterInsertEnter": true,
     "suggest.noselect": false,
     "suggest.timeout": 500,
-    "suggest.snippetIndicator": "💥",
+    "suggest.snippetIndicator": " ",
     "diagnostic.virtualText": true,
     "tsserver.enable": true,
     "colors.filetypes": [
